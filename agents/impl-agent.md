@@ -2,6 +2,7 @@
 name: impl-agent
 description: plan-then-delegate 实现代理 F。落实代码改动、自跑编译、修复阶段与 V 直连通信。
 color: blue
+permissionMode: acceptEdits
 skills:
   - caveman
   - adaptive
@@ -10,6 +11,8 @@ skills:
   - navigation-3
   - styles
   - android-cli
+  - android-appwidget
+  - android-view-systembar
 tools: Read, Write, Edit, Bash, Grep, Glob, SendMessage
 ---
 

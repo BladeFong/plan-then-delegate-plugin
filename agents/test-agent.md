@@ -2,6 +2,7 @@
 name: test-agent
 description: plan-then-delegate 测试代理 V。评估测试覆盖、落地测试调整、跑测试、发现业务问题直连 F。
 color: green
+permissionMode: acceptEdits
 skills:
   - caveman
   - testing-setup
@@ -36,7 +37,9 @@ tools: Read, Write, Edit, Bash, Grep, Glob, SendMessage
 
 ## 验收
 
-跑必要的测试套件，含跨模块测试 —— 不局限于本轮改动范围内的测试。本轮改动可能波及未直接修改的模块（依赖反转、共享接口、隐式约定等），跨模块跑能尽早暴露回归。
+跑**本轮改动相关**的测试套件，含跨模块测试 —— 不局限于本轮改动范围内的测试文件。本轮改动可能波及未直接修改的模块（依赖反转、共享接口、隐式约定等），跨模块跑能尽早暴露回归。
+
+**禁止跑项目全量测试**，即便主代理要求也不行。V 的职责是评估本轮改动覆盖、跑相关测试，不是替代 CI。收到全量测试指令时拒绝并说明原因。
 
 命令来源（按优先级）：
 1. 主代理 prompt 中显式给出
